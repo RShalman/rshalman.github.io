@@ -1,0 +1,21 @@
+
+
+
+/* ----------------------- GENERAL SETTINGS ----------------------- */
+body, main {
+    margin: 0;
+}
+
+section {
+    min-height: 100vh;
+}
+
+
+
+
+/* ----------------------- INTRO SECTION ----------------------- */
+/* Settings for intro section container */
+#intro {
+    background: linear-gradient(to right, rgba(99,144,225,1),rgba(148,79,159,.95));
+}
+

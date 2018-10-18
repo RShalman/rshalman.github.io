@@ -1,0 +1,23 @@
+
+
+
+/* ----------------------- GENERAL SETTINGS ----------------------- */
+:root {
+    --main-bg-gradient: linear-gradient(to right, rgba(99,144,225,1),rgba(148,79,159,.95));
+}
+
+body, main {
+    margin: 0;
+}
+
+section {
+    min-height: 100vh;
+}
+
+
+/* ----------------------- INTRO SECTION ----------------------- */
+/* Settings for intro section container */
+#intro {
+    background: linear-gradient(to right bottom, #fff 50%, transparent 50%), linear-gradient(to right top,rgba(99,144,225,1),rgba(148,79,159,.95)), url("https://png2.kisspng.com/show/586d52acb5cfc1a80ccf22f0f781089c/L0KzQYm3VME6N5xviZH0aYP2gLBuTfNwdaF6jNd7LXnmf7B6TgBmeqR0hp9ubnPkgMT8jPF1bZUyiNH8dIPmgrr3lL1td5h0ReJub4DvdX79hfN1d6MyhdN9ZYLscb20VfFlQJU5TdVuNXTnRIO1Vcg6OGU2UaM6NUK3QYaCVcgxQWU2TZD5bne=/kisspng-computer-icons-person-encapsulated-postscript-logo-people-vector-material-5ad8d45ce5dd42.5890419115241595809415.png") left 35vh no-repeat;
+}
+
