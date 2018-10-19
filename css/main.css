@@ -14,10 +14,34 @@ section {
     min-height: 100vh;
 }
 
+/* Main button styles */
+.my_btn {
+    width: 300px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 25px;
+    padding: 5px;
+    border: 0px solid transparent;
+    border-radius: 50px;
+    background-image: linear-gradient(white, white), linear-gradient(to left, rgba(99,144,225,1),rgba(148,79,159,.95));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    text-decoration: none;
+    color: rgba(44, 44, 44, 1);
+    transition: all .5s ease-in-out;
+}
+
+.my_btn:hover {
+    background-image: linear-gradient(transparent, transparent), linear-gradient(to left, rgba(99,144,225,1),rgba(148,79,159,.95));
+    color: #fff;
+    border: 4px solid #fff;
+}
 
 /* ----------------------- INTRO SECTION ----------------------- */
 /* Settings for intro section container */
 #intro {
+    position: relative;
     background: linear-gradient(to right bottom,transparent 50%, rgba(99,144,225,1) 0%,rgba(148,79,159,.95)), url("../img/shalman-photo.png") 8vw 50vh/25vh no-repeat;
     display: grid;
     align-items: center;
@@ -29,6 +53,20 @@ section {
       "description description . intro-contact"
       ". . . intro-hire"
       ". second-prof second-prof second-prof";
+}
+
+/* "&" symbol between 2 parts of section */
+#intro:before {
+    content: "&";
+    position: absolute;
+    font-size: 5vw;
+    width: 7vmax;
+    height: 5vw;
+    text-align: center;
+    line-height: 5vw;
+    background: linear-gradient(to right bottom, #000 50%, #fff 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #title {
@@ -47,6 +85,7 @@ section {
 
 #second-prof {
     grid-area: second-prof;
+    color: #fff;
     font-size: 5vw;
     justify-self: right;
     margin-right: 5vw;
@@ -54,24 +93,179 @@ section {
 
 #intro-contact {
     grid-area: intro-contact;
+    position: relative;
+}
+
+/* "OR" between Contact and Hire buttons */
+#intro-contact:before {
+    content: "or";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 150%;
+    line-height: 90px;
+    font-size: 2vw;
+    color: #fff;
+    /* makes pseudo-elem not clickable and disables URL for it (parent still works) */
+    pointer-events: none;
 }
 
 #intro-hire {
     grid-area: intro-hire;
 }
 
-.my_btn {
-    width: 300px;
-    height: 80px;
-    line-height: 80px;
-    text-align: center;
-    font-size: 25px;
-    padding: 5px;
-    border: 0px transparent;
-    border-radius: 50px;
-    background-image: linear-gradient(white, white), linear-gradient(to left, rgba(99,144,225,1),rgba(148,79,159,.95));
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    text-decoration: none;
-    color: rgba(44, 44, 44, 1);
+/* ----------------------- TOOLS AND TECHNOLOGIES SECTION ----------------------- */
+#tools-and-techs {
+    position: relative;
+    display: grid;
+    background: linear-gradient(to right bottom, rgba(99,144,225,1) 0%,rgba(148,79,159,.95) 50%, transparent 50%);
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+      "tool-and-techs-title vs-code terminal ."
+      "affinity vs-code . git-block"
+      "affinity . bootstrap-block jquery-block"
+      ". html-block css-block js-block";
 }
+
+#tool-and-techs-title {
+    grid-area: tool-and-techs-title;
+    font-size: 3vw;
+    margin-left: 2vw;
+    color: #fff;
+}
+
+/* Styles for block and images inside #affinity figure */
+#affinity {
+    grid-area: affinity;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+#affinity img {
+    width: 125px;
+    height: 114px;
+}
+/* End of styles */
+
+/* Styles for block and images inside #vs-code figure */
+#vs-code {
+    grid-area: vs-code;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#vs-code img {
+    width: 125px;
+    height: 125px;
+}
+/* End of styles */
+
+/* Styles for block and images inside #terminal figure */
+#terminal {
+    grid-area: terminal;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#terminal img {
+    width: 125px;
+    height: 108px;
+    margin-bottom: 15px;
+}
+/* End of styles */
+
+/* Styles for block and images inside #html-block figure */
+#html-block {
+    grid-area: html-block;
+    text-align: center;
+}
+
+#html-block img {
+    width: 125px;
+}
+/* End of styles */
+
+/* Styles for block and images inside #css-block figure */
+#css-block {
+    grid-area: css-block;
+    text-align: center;
+}
+
+#css-block img {
+    width: 125px;
+}
+/* End of styles */
+
+/* Styles for block and images inside #js-block figure */
+#js-block {
+    grid-area: js-block;
+    text-align: center;
+}
+
+#js-block img {
+    width: 125px;
+}
+/* End of styles */
+
+/* Styles for block and images inside #jquery-block figure */
+#jquery-block {
+    grid-area: jquery-block;
+    text-align: center;
+}
+
+#jquery-block img {
+    width: 125px;
+}
+/* End of styles */
+
+/* Styles for block and images inside #bootstrap-block figure */
+#bootstrap-block {
+    grid-area: bootstrap-block;
+    text-align: center;
+}
+
+#bootstrap-block img {
+    width: 125px;
+}
+/* End of styles */
+
+/* Styles for block and images inside #git-block figure */
+#git-block {
+    grid-area: git-block;
+    text-align: center;
+}
+
+#git-block img {
+    width: 125px;
+}
+/* End of styles */
+
+/* Styles for headers of figure captions */
+.caption-header {
+    font-size: 1.5vw;
+    margin: 15px auto;
+    width: 100%;
+}
+
+.caption-header.white-colored-text {
+    color: #fff;
+}
+/* End of styles */
+
+/* Styles for description of figure captions */
+.caption-description {
+    font-size: 1.2vw;
+    line-height: 2.5vw;
+}
+
+.caption-description.white-colored-text {
+    color: #fff;
+}
+/* End of styles */
+
