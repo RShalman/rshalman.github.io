@@ -18,11 +18,11 @@ section {
 .my_btn {
     width: 300px;
     height: 80px;
+    display: table;
     line-height: 80px;
     text-align: center;
     font-size: 25px;
-    padding: 5px;
-    border: 0px solid transparent;
+    border: 4px solid transparent;
     border-radius: 50px;
     background-image: linear-gradient(white, white), linear-gradient(to left, rgba(99,144,225,1),rgba(148,79,159,.95));
     background-origin: border-box;
@@ -269,3 +269,102 @@ section {
 }
 /* End of styles */
 
+/* ----------------------- PROJECTS SECTION ----------------------- */
+/* Makes project slidercontainer with its' content be not higher than it should (100vh) */
+#projects-slider {
+    max-height: 100vh;
+    position: relative;
+}
+
+.glide__track {
+    max-height: 100vh;
+}
+
+.glide__slides {
+    height: 100vh;
+    top: -1em;
+}
+
+/* Full-height for images insied slides */
+.glide__slide img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+}
+
+.glide__slide {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+.cosmotheca-project {
+    background: url(../img/cosmotheca-project.jpg) center/cover no-repeat;
+}
+
+.coworking-project {
+    background: url(../img/coworking-project.jpg) center/cover no-repeat;
+}
+
+.pimpmymac-project {
+    background: url(../img/pimpmymac-project.jpg) center/cover no-repeat;
+}
+
+.mironova-project {
+    background: url(../img/ira-mironova-project.jpg) center/cover no-repeat;
+}
+
+._9700-project {
+    background: url(../img/9700-project.jpg) center/cover no-repeat;
+}
+
+
+.glide__arrow {
+    position: absolute;
+    top: calc(50% - 1em);
+    background: transparent;
+    border: none;
+    font-size: 4em;
+    line-height: 2em;
+    padding: 0 1em;
+    cursor: pointer;
+    color: rgb(94, 145, 229);
+    outline: none;
+}
+
+.glide__arrow--left {
+    left: 0;
+}
+
+.glide__arrow--right {
+    right: 0;
+}
+
+.slide-text-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100vw + 10px);
+    height: 100%;
+    display: grid;
+    align-items: center;
+    color: #fff;
+    z-index: 9999999999;
+    background: rgba(1,1,1,.6);
+    text-shadow: 0 0 10px #fff;
+}
+
+.slide-text-container * {
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.slide-header {
+    font-size: 3vw;
+}
+
+.slide-description {
+    font-size: 2.2vw;
+    max-width: 50vw;
+}
