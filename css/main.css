@@ -9,6 +9,7 @@
 body, main {
     margin: 0;
     position: relative;
+    font-family: 'Gill Sans', sans-serif;
 }
 
 section {
@@ -17,6 +18,7 @@ section {
 
 /* Main button styles */
 .my_btn {
+    color: rgba(44, 44, 44, 1);
     width: 300px;
     height: 80px;
     display: table;
@@ -65,7 +67,7 @@ section {
     height: 5vw;
     text-align: center;
     line-height: 5vw;
-    background: linear-gradient(to right bottom, #000 50%, #fff 50%);
+    background: linear-gradient(to right bottom, rgba(44, 44, 44, 1) 50%, #fff 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -75,6 +77,8 @@ section {
     justify-self: stretch;
     font-size: 5vw;
     margin-left: 8vw;
+    color: rgba(44, 44, 44, 1);
+    font-weight: 600;
 }
 
 #description {
@@ -82,6 +86,7 @@ section {
     font-size: 2.3vw;
     line-height: 4vh;
     margin-left: 8vw;
+    color: rgba(44, 44, 44, 1);
 }
 
 #second-prof {
@@ -249,9 +254,10 @@ section {
 
 /* Styles for headers of figure captions */
 .caption-header {
-    font-size: 1.5vw;
+    font-size: 1.8vw;
     margin: 15px auto;
     width: 100%;
+    color: rgba(44, 44, 44, 1);
 }
 
 .caption-header.white-colored-text {
@@ -263,6 +269,7 @@ section {
 .caption-description {
     font-size: 1.2vw;
     line-height: 2.5vw;
+    margin-top: 1.5vw;
 }
 
 .caption-description.white-colored-text {
@@ -356,7 +363,7 @@ section {
     align-items: center;
     color: #fff;
     z-index: 9999999999;
-    background: rgba(1,1,1,.6);
+    background: rgba(44, 44, 44, .6);
     text-shadow: 0 0 10px #fff;
 }
 
@@ -413,12 +420,16 @@ section {
 
 #title-contacts {
     font-size: 4vw;
+    font-weight: 600;
     grid-area: title-contacts;
+    color: rgba(44, 44, 44, 1);
 }
 
 #description-contacts {
     font-size: 2.5vw;
+    font-weight: 300;
     grid-area: description-contacts;
+    color: rgba(44, 44, 44, 1);
 }
 
 #contact-contacts {
@@ -427,6 +438,7 @@ section {
 
 #socials-title {
     font-size: 2.5vw;
+    font-weight: 300;
     color: #fff;
     grid-area: socials-title;
     align-self: baseline;
