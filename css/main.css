@@ -1,4 +1,12 @@
-
+@font-face {
+    font-family: 'Chalkduster';
+    src:url('./fonts/Chalkduster.ttf.woff') format('woff'),
+        url('./fonts/Chalkduster.ttf.svg#Chalkduster') format('svg'),
+        url('./fonts/Chalkduster.ttf.eot'),
+        url('./fonts/Chalkduster.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
 
 
 /* ----------------------- GENERAL SETTINGS ----------------------- */
@@ -33,6 +41,7 @@ section {
     text-decoration: none;
     color: rgba(44, 44, 44, 1);
     transition: all .5s ease-in-out;
+    z-index: 9;
 }
 
 .my_btn:hover {
@@ -95,6 +104,7 @@ section {
     font-size: 5vw;
     justify-self: right;
     margin-right: 5vw;
+    font-family: 'Chalkduster'
 }
 
 #intro-contact {
@@ -120,6 +130,78 @@ section {
     grid-area: intro-hire;
 }
 
+/* ----------------------- INTRO SECTION ON MOBILE ----------------------- */
+@media (max-width: 767px) {
+    #intro {
+        background: url("../img/shalman-photo.png") 57vw 30vh/20vh no-repeat;
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-areas: 
+          "title title title title"
+          "second-prof second-prof second-prof second-prof"
+          "description description . ."
+          "description description . ."
+          "intro-contact intro-contact intro-contact intro-contact"
+          ". . . ."
+          "intro-hire intro-hire intro-hire intro-hire";
+    }
+
+    #intro:before {
+        top: 17%;
+        background: transparent;
+        -webkit-text-fill-color: currentColor;
+        font-size: 8vw;
+    }
+
+    /* BG for intro on mobile */
+    #intro:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 57%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(99,144,225,1) 0%,rgba(148,79,159,1));
+    }
+
+    #title {
+        font-size: 8vw;
+        margin: 0 auto;
+        align-self: flex-end;
+        font-weight: 400;
+    }
+
+    #second-prof {
+        color: rgba(44, 44, 44, 1);
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        font-weight: 400;
+        font-size: 11.5vw;
+        align-self: flex-end;
+    }
+
+    #description {
+        font-size: 4vw;
+        line-height: 3vh;
+    }
+
+    .my_btn {
+        width: 180px;
+        height: 48px;
+        line-height: 48px;
+        font-size: 20px;
+    }
+
+    #intro-contact:before {
+        top: 170%;
+        font-size: 8vw;
+        font-weight: 300;
+    }
+
+
+}
+
+
 /* ----------------------- TOOLS AND TECHNOLOGIES SECTION ----------------------- */
 #tools-and-techs {
     position: relative;
@@ -130,17 +212,18 @@ section {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-template-areas: 
-      "tool-and-techs-title vs-code terminal ."
+      "t-and-t vs-code terminal ."
       "affinity vs-code . git-block"
       "affinity . bootstrap-block jquery-block"
       ". html-block css-block js-block";
 }
 
 #tool-and-techs-title {
-    grid-area: tool-and-techs-title;
+    grid-area: t-and-t;
     font-size: 3vw;
     margin-left: 2vw;
     color: #fff;
+    font-family: 'Chalkduster';
 }
 
 /* Styles for block and images inside #affinity figure */
@@ -277,6 +360,103 @@ section {
 }
 /* End of styles */
 
+
+/* ----------------------- TOOLS AND TECHNOLOGIES SECTION (ON MOBILE) ----------------------- */
+@media (max-width: 767px) {
+    #tools-and-techs {
+        background: linear-gradient(to right, rgba(99,144,225,1) 0%,rgba(148,79,159,.95));
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 20vh repeat(4, 200px);
+        align-items: center;
+        grid-template-areas: 
+        "t-and-t t-and-t t-and-t t-and-t t-and-t t-and-t" 
+        "affinity affinity vs-code vs-code terminal terminal" 
+        "html-block html-block html-block css-block css-block css-block" 
+        "js-block js-block js-block git-block git-block git-block" 
+        "bootstrap-block bootstrap-block bootstrap-block jquery-block jquery-block jquery-block";
+    }
+
+    figure {
+        margin: 0;
+    }
+
+    #tool-and-techs-title {
+        font-size: 7vw;
+        align-self: flex-end;
+        font-weight: 300;
+    }
+
+    #affinity, #vs-code, #terminal {
+        align-self: flex-start;
+    }
+
+    /* Only Designer logo should be visible on mobile */
+    #affinity img[alt="Affinity Photo"] {
+        display: none;
+    }
+
+    #affinity img {
+        width: 65px;
+        height: 60.6px;
+    }
+
+    #vs-code img {
+        width: 65px;
+        height: 65px;
+    }
+
+    #terminal img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .caption-description.white-colored-text:not(.terminal-desc) {
+        display: none;
+    }
+
+    .caption-header {
+        font-size: 5vw;
+        text-align: center;
+    }
+
+    .caption-header:not(.white-colored-text) {
+        align-self: flex-start;
+    }
+
+    .terminal-desc {
+        font-size: 5vw;
+        line-height: 5vw;
+        margin: 0 3vw;
+    }
+
+    #html-block img, #css-block img, #js-block img, #bootstrap-block img {
+        width: 85px;
+    }
+
+    #git-block img {
+        width: 100px;
+    }
+
+    #jquery-block img {
+        width: 90px;
+    }
+
+    #html-block, #css-block, #git-block, #js-block, #jquery-block, #bootstrap-block {
+        background: #fff;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+
+}
+
+
+
+
 /* ----------------------- PROJECTS SECTION ----------------------- */
 /* Makes project slidercontainer with its' content be not higher than it should (100vh) */
 #projects-slider {
@@ -341,8 +521,9 @@ section {
     line-height: 2em;
     padding: 0 1em;
     cursor: pointer;
-    color: rgb(94, 145, 229);
+    color: rgba(148,79,159,.95);
     outline: none;
+    text-shadow: 2px 0 0 rgb(94, 145, 229), -2px 0 0 rgb(94, 145, 229), 0 2px 0 rgb(94, 145, 229), 0 -2px 0 rgb(94, 145, 229), 1px 1px rgb(94, 145, 229), -1px -1px 0 rgb(94, 145, 229), 1px -1px 0 rgb(94, 145, 229), -1px 1px 0 rgb(94, 145, 229);
 }
 
 .glide__arrow--left {
@@ -364,7 +545,6 @@ section {
     color: #fff;
     z-index: 9999999999;
     background: rgba(44, 44, 44, .6);
-    text-shadow: 0 0 10px #fff;
 }
 
 .slide-text-container * {
@@ -374,11 +554,28 @@ section {
 
 .slide-header {
     font-size: 3vw;
+    font-family: 'Chalkduster';
 }
 
 .slide-description {
     font-size: 2.2vw;
     max-width: 50vw;
+}
+
+/* ----------------------- PROJECTS SECTION ON MOBILE ----------------------- */
+@media (max-width: 767px) {
+    .slide-header {
+        font-size: 8vw;
+    }
+
+    .slide-description {
+        max-width: 60vw;
+        font-size: 8vw;
+    }
+
+    .glide__arrow {
+        padding: 0 15px;
+    }
 }
 
 /* ----------------------- CONTACTS SECTION ----------------------- */
@@ -519,6 +716,51 @@ section {
     background: #fff;
     -webkit-mask: url(../img/gm_logo.svg) no-repeat 50% 50%;
     mask: url(../img/gm_logo.svg) no-repeat 50% 50%;
+}
+
+/* ----------------------- CONTACTS SECTION ON MOBILE ----------------------- */
+@media (max-width: 767px) {
+    #contacts {
+        grid-template-columns: 1fr 90vw 1fr;
+        grid-template-rows: 20vh 20vh 20vh 1fr 1fr;
+    }
+
+    #title-contacts {
+        font-size: 7.5vw;
+        font-weight: 400;
+    }
+
+    #description-contacts {
+        font-size: 6vw;
+    }
+
+    #socials-title {
+        font-size: 5vw;
+        align-self: center;
+    }
+
+    #social-buttons-list {
+        justify-content: space-evenly;
+        margin-bottom: 10vh;
+    }
+
+    #social-buttons-list a {
+        padding: 22.5px;
+    }
+
+    #social-buttons-list li {
+        margin: 5vw 5vw 0vw 5vw;
+    }
+
+    .fcc {
+        -webkit-mask: url(../img/fcc_logo.svg) no-repeat 55% 50%;
+        mask: url(../img/fcc_logo.svg) no-repeat 55% 50%;
+    }
+
+    .gh {
+        -webkit-mask: url(../img/gh_logo.svg) no-repeat 55% 50%;
+        mask: url(../img/gh_logo.svg) no-repeat 55% 50%;
+    }
 }
 
 
