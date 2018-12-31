@@ -29,8 +29,8 @@ section {
     color: rgba(44, 44, 44, 1);
     width: 300px;
     height: 80px;
-    display: table;
-    line-height: 80px;
+    display: block;
+    line-height: 75px;
     text-align: center;
     font-size: 25px;
     border: 4px solid transparent;
@@ -130,6 +130,69 @@ section {
     grid-area: intro-hire;
 }
 
+/* ----------------------- INTRO SECTION ON TABLET ----------------------- */
+@media (min-width: 768px) and (max-width: 1199px) {
+    #intro {
+        background: url("../img/shalman-photo.png") 57vw 12vh/25vh no-repeat;
+        grid-template-areas: 
+          "title title title ."
+          "description description . ."
+          "second-prof second-prof second-prof second-prof"
+          "intro-contact intro-contact intro-hire intro-hire";
+    }
+
+    #intro:before {
+       background: linear-gradient(to bottom, rgba(44, 44, 44, 1) 50%, #fff 50%);
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+        z-index: 1;
+    }
+
+    #intro:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(99,144,225,1) 0%,rgba(148,79,159,1));
+    }
+
+    #title {
+        font-size: 5.5vw;
+    }
+
+    #second-prof {
+        font-size: 6vw;
+        z-index: 1;
+        margin: 0 auto;
+    }
+
+    #description {
+        font-size: 3vw;
+    }
+
+    #intro-contact:before {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) and (orientation: landscape) {
+    #intro {
+        background: url("../img/shalman-photo.png") 75vw 12vh/25vh no-repeat;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+          ". title title ."
+          "description description description ."
+          "second-prof second-prof second-prof second-prof"
+          "intro-contact intro-contact intro-hire intro-hire";
+    }
+
+    #title {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
 /* ----------------------- INTRO SECTION ON MOBILE ----------------------- */
 @media (max-width: 767px) {
     #intro {
@@ -193,14 +256,50 @@ section {
     }
 
     #intro-contact:before {
-        top: 170%;
-        font-size: 8vw;
-        font-weight: 300;
+        display: none;
     }
 
 
 }
 
+@media (max-width: 767px) and (orientation: landscape) {
+    #description {
+        font-size: 5vh;
+        line-height: 6vh;
+    }
+
+    #intro {
+        background: url("../img/shalman-photo.png") 83vw 15vh/31vh no-repeat;
+        grid-template-rows: repeat(4, 25vh);
+        grid-template-areas: 
+          "title title second-prof second-prof"
+          "description description description ."
+          "intro-contact intro-contact intro-hire intro-hire"
+          "intro-contact intro-contact intro-hire intro-hire";
+    }
+
+    #intro:before {
+        top: 10%;
+    }
+
+    #title {
+        font-size: 5vw;
+        max-width: 25vw;
+        justify-self: flex-end;
+    }
+
+    #second-prof {
+        font-size: 5vw;
+        max-width: 25vw;
+    }
+
+    #intro-contact:before {
+        top: -7vh;
+        left: 125%;
+        font-size: 4vw;
+    }
+
+}
 
 /* ----------------------- TOOLS AND TECHNOLOGIES SECTION ----------------------- */
 #tools-and-techs {
@@ -360,8 +459,123 @@ section {
 }
 /* End of styles */
 
+/* ----------------------- TOOLS AND TECHNOLOGIES SECTION ON TABLET----------------------- */
+@media (min-width: 768px) and (max-width: 1199px) {
+    #html-block, #css-block, #js-block, #jquery-block, #bootstrap-block, #git-block {
+        margin: 0;
+    }
 
-/* ----------------------- TOOLS AND TECHNOLOGIES SECTION (ON MOBILE) ----------------------- */
+    #tools-and-techs {
+        background: inherit;
+    }
+
+    #tools-and-techs {
+        background: linear-gradient(to right, rgba(99,144,225,1) 0%,rgba(148,79,159,.95));
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(4, 25vh);
+        align-items: center;
+        grid-template-areas: 
+        "t-and-t t-and-t t-and-t t-and-t t-and-t t-and-t t-and-t t-and-t" 
+        "affinity affinity vs-code vs-code vs-code vs-code terminal terminal" 
+        "html-block html-block css-block css-block js-block js-block git-block git-block" 
+        "bootstrap-block bootstrap-block jquery-block jquery-block . . . .";
+    }
+
+    #tools-and-techs:before {
+        content: "";
+        height: 50vh;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        background: #fff;
+        z-index: 0;
+    }
+
+    #tool-and-techs-title {
+        font-size: 7vw;
+        align-self: flex-end;
+        font-weight: 300;
+    }
+
+    #affinity, #vs-code, #terminal {
+        align-self: flex-start;
+        margin: 0 5px;
+    }
+
+    /* Only Designer logo should be visible on mobile */
+    #affinity img[alt="Affinity Photo"] {
+        display: none;
+    }
+
+    #affinity img {
+        width: 65px;
+        height: 60.6px;
+    }
+
+    #vs-code img {
+        width: 65px;
+        height: 65px;
+    }
+
+    #terminal img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .caption-description.white-colored-text:not(.terminal-desc) {
+        display: none;
+    }
+
+    .caption-header {
+        font-size: 3.5vw;
+        text-align: center;
+    }
+
+    .caption-header:not(.white-colored-text) {
+        align-self: flex-start;
+    }
+
+    .terminal-desc {
+        font-size: 3vw;
+        line-height: 4vw;
+        margin: 0 3vw;
+    }
+
+    #html-block img, #css-block img, #js-block img, #bootstrap-block img {
+        width: 85px;
+    }
+
+    #git-block img {
+        width: 100px;
+    }
+
+    #jquery-block img {
+        width: 90px;
+    }
+
+    #html-block, #css-block, #git-block, #js-block, #jquery-block, #bootstrap-block {
+        background: #fff;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-end;
+        z-index: 1;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) and (orientation: landscape) {
+    .caption-header {
+        font-size: 2.5vw;
+    }
+
+    .terminal-desc {
+        font-size: 2.5vw;
+    }
+}
+
+/* ----------------------- TOOLS AND TECHNOLOGIES SECTION ON MOBILE ----------------------- */
 @media (max-width: 767px) {
     #tools-and-techs {
         background: linear-gradient(to right, rgba(99,144,225,1) 0%,rgba(148,79,159,.95));
@@ -454,6 +668,35 @@ section {
 
 }
 
+@media (max-width: 767px) and (orientation: landscape) {
+    #tools-and-techs {
+        grid-template-rows: 38vh repeat(4, 200px);
+    }
+
+    #tool-and-techs-title {
+        margin: 0;
+        align-self: center;
+    }
+
+    #affinity, #vs-code, #terminal {
+        margin-top: 5vh;
+        align-self: flex-start;
+    }
+
+    #affinity img, #vs-code img, #terminal img {
+        min-height: 65px;
+        margin: 0;
+    }
+
+    .caption-header {
+        font-size: 3vw;
+    }
+
+    .terminal-desc {
+        font-size: 2.5vw;
+        margin: 15px auto;
+    }
+}
 
 
 
@@ -563,6 +806,17 @@ section {
 }
 
 /* ----------------------- PROJECTS SECTION ON MOBILE ----------------------- */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .slide-header {
+        font-size: 5vw;
+    }
+
+    .slide-description {
+        font-size: 4vw;
+    }
+}
+
+/* ----------------------- PROJECTS SECTION ON MOBILE ----------------------- */
 @media (max-width: 767px) {
     .slide-header {
         font-size: 8vw;
@@ -575,6 +829,12 @@ section {
 
     .glide__arrow {
         padding: 0 15px;
+    }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+    .slide-description {
+        font-size: 4vw;
     }
 }
 
@@ -718,11 +978,56 @@ section {
     mask: url(../img/gm_logo.svg) no-repeat 50% 50%;
 }
 
+/* ----------------------- CONTACTS SECTION ON TABLET ----------------------- */
+@media (min-width: 768px) and (max-width: 1199px) {
+    #contacts {
+        grid-template-rows: 20vh 20vh 20vh 10vh 30vh;
+    }
+
+    #title-contacts {
+        font-size: 7vw;
+        max-width: 90vw;
+    }
+
+    #description-contacts {
+        font-size: 4vw;
+        max-width: 90vw;
+    }
+
+    #socials-title {
+        font-size: 4vw;
+        max-width: 90vw;
+    }
+
+    #social-buttons-list {
+        max-width: 90vw;
+        justify-content: space-evenly;
+    }
+    
+    #social-buttons-list li {
+        margin: 5vw 0 0 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) and (orientation: landscape) {
+    #title-contacts {
+        font-size: 5vw;
+    }
+    
+    #description-contacts {
+        font-size: 3vw;
+    }
+
+    #socials-title {
+        font-size: 2.5vw;
+    }
+}
+
 /* ----------------------- CONTACTS SECTION ON MOBILE ----------------------- */
 @media (max-width: 767px) {
     #contacts {
         grid-template-columns: 1fr 90vw 1fr;
-        grid-template-rows: 20vh 20vh 20vh 1fr 1fr;
+        grid-template-rows: 20vh 20vh 20vh 1vh 39vh;
     }
 
     #title-contacts {
@@ -741,7 +1046,8 @@ section {
 
     #social-buttons-list {
         justify-content: space-evenly;
-        margin-bottom: 10vh;
+        margin-bottom: 0;
+        align-self: center;
     }
 
     #social-buttons-list a {
@@ -749,7 +1055,7 @@ section {
     }
 
     #social-buttons-list li {
-        margin: 5vw 5vw 0vw 5vw;
+        margin: 5vw 3vw 0vw 3vw;
     }
 
     .fcc {
@@ -761,8 +1067,30 @@ section {
         -webkit-mask: url(../img/gh_logo.svg) no-repeat 55% 50%;
         mask: url(../img/gh_logo.svg) no-repeat 55% 50%;
     }
+
+    #copyrights {
+        margin-bottom: 0.5vh;
+    }
 }
 
+@media (max-width: 767px) and (orientation: landscape) {
+    #title-contacts {
+        font-size: 4vw;
+    }
+
+    #description-contacts {
+        font-size: 3vw;
+    }
+
+    #socials-title {
+        font-size: 3vw;
+        margin-top: 5vh;
+    }
+
+    #social-buttons-list li {
+        margin: 5vw 0vw 0vw 0vw;
+    }
+}
 
 /* ----------------------- FOOTER ----------------------- */
 footer {
