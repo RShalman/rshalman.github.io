@@ -1,0 +1,64 @@
+{
+  "skills": [
+    {
+      "name": "JavaScript",
+      "imageURL": ""
+    },
+    {
+      "name": "TypeScript",
+      "imageURL": ""
+    },
+    {
+      "name": "Node.js",
+      "imageURL": ""
+    },
+    {
+      "name": "Git",
+      "imageURL": ""
+    },
+    {
+      "name": "React",
+      "imageURL": ""
+    },
+    {
+      "name": "MobX",
+      "imageURL": ""
+    },
+    {
+      "name": "Redux",
+      "imageURL": ""
+    },
+    {
+      "name": "Next.js",
+      "imageURL": ""
+    },
+    {
+      "name": "Webpack",
+      "imageURL": ""
+    },
+    {
+      "name": "Babel",
+      "imageURL": ""
+    },
+    {
+      "name": "CSS-in-JS",
+      "imageURL": ""
+    },
+    {
+      "name": "Mocha",
+      "imageURL": ""
+    },
+    {
+      "name": "Jest",
+      "imageURL": ""
+    },
+    {
+      "name": "Enzyme",
+      "imageURL": ""
+    },
+    {
+      "name": "React Testing library",
+      "imageURL": ""
+    }
+  ]
+}

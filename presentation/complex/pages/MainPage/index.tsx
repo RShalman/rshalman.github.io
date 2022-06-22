@@ -1,20 +1,14 @@
 import { FC } from "react";
-import Image from "next/image";
 import S from "./index.module.scss";
 import { MainPageProps } from "./types";
+import { Greeting } from "@presentation/commons/Greeting";
+import { Skills } from "@presentation/commons/Skills";
 
 export const MainPage: FC<MainPageProps> = () => {
   return (
     <div className={S.MainPage}>
-      <div className={S.avatar}>
-        <Image
-          src={"/images/roman-shalman-photo.png"}
-          layout={"fill"}
-          objectFit={"contain"}
-          objectPosition={"bottom"}
-        />
-        <p>Some test text</p>
-      </div>
+      <Greeting />
+      <Skills />
     </div>
   );
 };

@@ -23,6 +23,12 @@
     "paths": {
       "@presentation/*": [
         "./presentation/*"
+      ],
+      "@styles/*": [
+        "./styles/*"
+      ],
+      "@config/*": [
+        "./config/*"
       ]
   }
   },
