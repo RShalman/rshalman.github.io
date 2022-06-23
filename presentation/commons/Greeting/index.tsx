@@ -13,9 +13,9 @@ export const Greeting = () => (
     </div>
     <div className={S.greetingsText}>
       <p className={S.greeting}>Hello World!</p>
-      <p className={S.intro}>
+      <h1 className={S.intro}>
         I'm Roman Shalman - Software Engineer with general focus on Frontend
-      </p>
+      </h1>
     </div>
   </div>
 );

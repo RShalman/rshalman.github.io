@@ -2,63 +2,55 @@
   "skills": [
     {
       "name": "JavaScript",
-      "imageURL": ""
+      "imageURL": "/images/javascript.png"
     },
     {
       "name": "TypeScript",
-      "imageURL": ""
+      "imageURL": "/images/typescript.png"
     },
     {
       "name": "Node.js",
-      "imageURL": ""
+      "imageURL": "/images/nodejs.png"
     },
     {
       "name": "Git",
-      "imageURL": ""
+      "imageURL": "/images/git.png"
     },
     {
       "name": "React",
-      "imageURL": ""
+      "imageURL": "/images/react.png"
     },
     {
       "name": "MobX",
-      "imageURL": ""
+      "imageURL": "/images/mobx.png"
     },
     {
       "name": "Redux",
-      "imageURL": ""
+      "imageURL": "/images/redux.png"
     },
     {
       "name": "Next.js",
-      "imageURL": ""
+      "imageURL": "/images/nextjs.png"
     },
     {
       "name": "Webpack",
-      "imageURL": ""
+      "imageURL": "/images/webpack.png"
     },
     {
       "name": "Babel",
-      "imageURL": ""
+      "imageURL": "/images/babel.png"
     },
     {
       "name": "CSS-in-JS",
-      "imageURL": ""
+      "imageURL": "/images/sass.png"
     },
     {
-      "name": "Mocha",
-      "imageURL": ""
+      "name": "Tailwind",
+      "imageURL": "/images/tailwind.png"
     },
     {
-      "name": "Jest",
-      "imageURL": ""
-    },
-    {
-      "name": "Enzyme",
-      "imageURL": ""
-    },
-    {
-      "name": "React Testing library",
-      "imageURL": ""
+      "name": "Jest + Enzyme + React Testing Library",
+      "imageURL": "/images/jest.png"
     }
   ]
 }
