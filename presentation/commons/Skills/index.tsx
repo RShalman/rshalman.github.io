@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import config from "@config/config.json";
 import S from "./index.module.scss";
 
@@ -11,14 +9,14 @@ export const Skills = () => (
         {config.skills.map((skill) => (
           <div key={skill.name} className={S.skill}>
             <div className={S.skillImage}>
-              <Image
-                src={skill.imageURL}
-                layout={"fill"}
-                objectFit={"contain"}
-                objectPosition={"bottom"}
-                priority={false}
-                alt={skill.name}
-              />
+              {/*<Image*/}
+              {/*  src={skill.imageURL}*/}
+              {/*  layout={"fill"}*/}
+              {/*  objectFit={"contain"}*/}
+              {/*  objectPosition={"bottom"}*/}
+              {/*  priority={false}*/}
+              {/*  alt={skill.name}*/}
+              {/*/>*/}
             </div>
             <p>{skill.name}</p>
           </div>

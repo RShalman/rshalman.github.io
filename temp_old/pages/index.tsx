@@ -1,4 +1,4 @@
-import { MainPage } from "@presentation/complex/pages/MainPage";
+import { MainPage } from "@presentation/../../presentation/complex/pages/MainPage";
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
