@@ -1,6 +1,7 @@
-import config from "@config/config.json";
-import S from "./index.module.scss";
+import config from '@config/config.json';
+import S from './index.module.scss';
 
+//  TODO: switch all to SVGs
 export const Skills = () => (
   <div className={S.skills}>
     <div className={S.wrapper}>
@@ -9,14 +10,7 @@ export const Skills = () => (
         {config.skills.map((skill) => (
           <div key={skill.name} className={S.skill}>
             <div className={S.skillImage}>
-              {/*<Image*/}
-              {/*  src={skill.imageURL}*/}
-              {/*  layout={"fill"}*/}
-              {/*  objectFit={"contain"}*/}
-              {/*  objectPosition={"bottom"}*/}
-              {/*  priority={false}*/}
-              {/*  alt={skill.name}*/}
-              {/*/>*/}
+              <img src={skill.imageURL} alt={skill.name} />
             </div>
             <p>{skill.name}</p>
           </div>

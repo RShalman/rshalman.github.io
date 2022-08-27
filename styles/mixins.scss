@@ -1,0 +1,49 @@
+// Predefined Break-points
+$mediaLargeWidth: 1440px;
+$mediaSemiLargeWidth: 1260px;
+$mediaMidWidth: 960px;
+$mediaSemiMidWidth: 700px;
+$mediaMinWidth: 480px;
+
+@function translate-media-condition($c) {
+  $condMap: (
+          "screen": "only screen",
+          "print": "only print",
+          "retina": "(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 120dpi)",
+          ">largeWidth": "(min-width: #{$mediaLargeWidth + 1})",
+          "<largeWidth": "(max-width: #{$mediaLargeWidth})",
+          ">semiLargeWidth": "(min-width: #{$mediaSemiLargeWidth + 1})",
+          "<semiLargeWidth": "(max-width: #{$mediaSemiLargeWidth})",
+          ">midWidth": "(min-width: #{$mediaMidWidth + 1})",
+          "<midWidth": "(max-width: #{$mediaMidWidth})",
+          ">semiMidWidth": "(min-width: #{$mediaSemiMidWidth + 1})",
+          "<semiMidWidth": "(max-width: #{$mediaSemiMidWidth})",
+          ">minWidth": "(min-width: #{$mediaMinWidth + 1})",
+          "<minWidth": "(max-width: #{$mediaMinWidth})"
+  );
+  @return map-get($condMap, $c);
+}
+
+// The mdia mixin
+@mixin media($args...) {
+  $query: "";
+  @each $arg in $args {
+    $op: "";
+    @if ($query != "") {
+      $op: " and ";
+    }
+    $query: $query + $op + translate-media-condition($arg);
+  }
+  @media #{$query}  {
+    @content;
+  }
+}
+
+//For Safari 11+
+@mixin safari() {
+  @media not all and (min-resolution: .001dpcm) {
+    @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+      @content
+    }
+  }
+}

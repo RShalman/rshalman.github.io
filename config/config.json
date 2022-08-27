@@ -21,6 +21,10 @@
       "imageURL": "/images/react.png"
     },
     {
+      "name": "Svelte",
+      "imageURL": "/images/svelte.svg"
+    },
+    {
       "name": "MobX",
       "imageURL": "/images/mobx.png"
     },
@@ -37,6 +41,10 @@
       "imageURL": "/images/webpack.png"
     },
     {
+      "name": "Vite",
+      "imageURL": "/vite.svg"
+    },
+    {
       "name": "Babel",
       "imageURL": "/images/babel.png"
     },
@@ -49,7 +57,7 @@
       "imageURL": "/images/tailwind.png"
     },
     {
-      "name": "Jest + Enzyme + React Testing Library",
+      "name": "Jest",
       "imageURL": "/images/jest.png"
     }
   ]

@@ -1,14 +1,9 @@
-import S from "./index.module.scss";
+import S from './index.module.scss';
 
 export const Greeting = () => (
   <div className={S.greetings}>
     <div className={S.avatar}>
-      {/*<Image*/}
-      {/*  src={"/images/roman-shalman-photo.png"}*/}
-      {/*  layout={"fill"}*/}
-      {/*  objectFit={"contain"}*/}
-      {/*  objectPosition={"bottom"}*/}
-      {/*/>*/}
+      <img src="/images/roman-shalman-photo.png" alt="Roman Shalman Photo" />
     </div>
     <div className={S.greetingsText}>
       <p className={S.greeting}>Hello World!</p>

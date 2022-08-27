@@ -1,5 +1,5 @@
-import "temp_old/styles/globals.scss";
-import "temp_old/styles/_variables.scss";
+import "styles/globals.scss";
+import "styles/_variables.scss";
 
 import type { AppProps } from "next/app";
 
