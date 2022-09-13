@@ -60,5 +60,27 @@
       "name": "Jest",
       "imageURL": "/images/jest.png"
     }
+  ],
+  "workplaces": [
+    {
+      "name": "Currency-Solutions",
+      "imagePath": "images/CurrencySolutions-logo.svg"
+    },
+    {
+      "name": "VTB",
+      "imagePath": "images/VTB-Logo.svg"
+    },
+    {
+      "name": "Sber",
+      "imagePath": "images/Sberbank-Logo.svg"
+    },
+    {
+      "name": "Wildberries",
+      "imagePath": "images/WB-logo.svg"
+    },
+    {
+      "name": "MIA Rossiya Segodnya",
+      "imagePath": "images/RossiyaSegodnya-logo.svg"
+    }
   ]
 }

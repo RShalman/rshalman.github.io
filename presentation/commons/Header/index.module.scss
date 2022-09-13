@@ -1,0 +1,15 @@
+@import "styles/mixins";
+
+.Header {
+    color: var(--black);
+    font-size: 30px;
+    margin: 0;
+    padding-top: 30px;
+    mix-blend-mode: overlay;
+    height: fit-content;
+    align-self: flex-start;
+
+    @include media('screen', "<midWidth") {
+        color: var(--white);
+    }
+}

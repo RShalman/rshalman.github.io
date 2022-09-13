@@ -1,11 +1,13 @@
 import config from '@config/config.json';
+import { Header } from '@presentation/commons/Header';
+
 import S from './index.module.scss';
 
 //  TODO: switch all to SVGs
 export const Skills = () => (
   <div className={S.skills}>
     <div className={S.wrapper}>
-      <h2>Experienced in following technologies</h2>
+      <Header title={'Experienced in following technologies'} />
       <div className={S.skillsList}>
         {config.skills.map((skill) => (
           <div key={skill.name} className={S.skill}>
