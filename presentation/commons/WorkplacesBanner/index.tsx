@@ -9,8 +9,8 @@ export const WorkplacesBanner = () => {
   const { workplaces } = config ?? {};
 
   return (
-    <div className={S.workplacesBanner}>
-      <Header title={"Places I've worked at"} className={S.header} />
+    <section className={S.workplacesBanner}>
+      <Header title={"Companies I've worked at"} className={S.header} />
       <div
         className={S.carousel}
         style={{
@@ -28,6 +28,6 @@ export const WorkplacesBanner = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };

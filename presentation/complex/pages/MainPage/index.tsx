@@ -4,7 +4,7 @@ import { MainPageProps } from 'presentation/complex/pages/MainPage/types';
 
 import { Greeting } from '@presentation/commons/Greeting';
 import { Skills } from '@presentation/commons/Skills';
-import { Socials } from '@presentation/commons/Socials';
+import { Socials } from '@presentation/complex/Socials';
 import { WorkplacesBanner } from '@presentation/commons/WorkplacesBanner';
 
 import S from './index.module.scss';
