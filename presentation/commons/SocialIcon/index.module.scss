@@ -32,6 +32,10 @@
       border-radius: 100%;
       transition: all .3s ease-in-out;
     }
+
+    img {
+      filter: drop-shadow(0 0 3px var(--purple));
+    }
   }
 
   &:hover {
@@ -62,7 +66,6 @@
     img {
       width: 50%;
       height: 50%;
-      filter: drop-shadow(0 0 3px var(--purple));
     }
   }
 

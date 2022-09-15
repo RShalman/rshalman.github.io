@@ -4,6 +4,7 @@ import { Header } from '@presentation/commons/Header';
 import S from './index.module.scss';
 
 //  TODO: switch all to SVGs
+// TODO: accessibility
 export const Skills = () => (
   <div className={S.skills}>
     <div className={S.wrapper}>
