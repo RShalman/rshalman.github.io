@@ -37,11 +37,12 @@
       ],
       "@utils/*": [
         "./utils/*"
+      ],"@types/*": [
+        "./types/*"
       ]
     }
   },
   "include": [
-    "next-env.d.ts",
     "**/*.ts",
     "**/*.d.ts",
     "**/*.tsx",

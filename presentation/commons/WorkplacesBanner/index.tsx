@@ -1,16 +1,27 @@
 import config from '@config/config.json';
 import { Header } from '@presentation/commons/Header/index';
+import { useShowOnIntersection } from '@presentation/providers/IntersectionProvider/hooks/use-show-on-intersection';
+import { useRef } from 'react';
 
 import S from './index.module.scss';
 
 const bannerWidth = 500;
 
 export const WorkplacesBanner = () => {
+  const workplacesBannerRef = useRef(null);
+  const isShow = useShowOnIntersection(workplacesBannerRef);
+
   const { workplaces } = config ?? {};
 
   return (
-    <section className={S.workplacesBanner}>
-      <Header title={"Companies I've worked at"} className={S.header} />
+    <section ref={workplacesBannerRef} className={S.workplacesBanner}>
+      {isShow && (
+        <Header
+          title={"Companies I've worked at"}
+          className={S.header}
+          withTypeWriter
+        />
+      )}
       <div
         className={S.carousel}
         style={{

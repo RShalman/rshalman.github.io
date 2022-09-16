@@ -1,17 +1,5 @@
 @import "styles/mixins";
 
-@keyframes blinking-cursor {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 .greetings {
   position: relative;
   max-height: 100vh;
@@ -72,22 +60,8 @@
       margin: 25px 0;
     }
 
-    .helloWorldCursor {
-      position: relative;
-      animation: blinking-cursor 1s infinite;
-    }
-
     .greeting {
       align-self: flex-end;
-
-      &.complete {
-        position: relative;
-
-        .helloWorldCursor {
-          opacity: 0;
-          animation: none;
-        }
-      }
     }
 
     .intro {

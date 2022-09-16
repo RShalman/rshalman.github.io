@@ -1,15 +1,44 @@
 @import "styles/mixins";
 
+@keyframes contact-me {
+  from {
+    transform: translateX(-100vmax);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes contact-me-backward {
+  from {
+    transform: translateX(100vmax);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes socials {
+  0% {
+    opacity: 0;
+    transform: translateX(-40vmax);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .socials {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(to left top,transparent 50%, var(--purple) 50.1%,var(--blue)) no-repeat;
+  background: linear-gradient(to left top, transparent 50%, var(--purple) 50.1%, var(--blue)) no-repeat;
   box-sizing: border-box;
   overflow: hidden;
 
   @include media('screen', "<midWidth") {
-    background: linear-gradient(to right bottom,var(--blue),var(--purple)) no-repeat;
+    background: linear-gradient(to right bottom, var(--blue), var(--purple)) no-repeat;
   }
 
   .wrapper {
@@ -24,16 +53,12 @@
     .text {
       max-width: 50%;
       margin-top: 20%;
+      color: var(--white);
+      font-size: 36px;
 
       @include media('screen', "<semiMidWidth") {
         max-width: 100%;
         margin-bottom: 30px;
-      }
-
-      p {
-        color: var(--white);
-        font-size: 36px;
-        margin: 0;
       }
     }
 
@@ -57,6 +82,15 @@
         right: auto;
         margin: 0 auto;
       }
+
+      .contactMe {
+        transform: translateX(-100vmax);
+        animation: contact-me 1.5s ease-in-out forwards;
+
+        @include media('screen', "<midWidth") {
+          animation: contact-me-backward 1.5s ease-in-out forwards;
+        }
+      }
     }
 
     .icons {
@@ -78,6 +112,9 @@
       }
 
       .iconWrapper {
+        opacity: 0;
+        animation: socials 1.5s ease-in-out forwards;
+
         @include media('screen', "<midWidth") {
           transform: none !important;
         }

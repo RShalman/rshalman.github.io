@@ -1,118 +1,134 @@
 @import "styles/mixins";
 
+@keyframes skill-show {
+  from {
+    opacity: 0;
+    scale: 0.8;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
 .skills {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(to right bottom,transparent 50%, var(--blue) 50.1%,var(--purple)) no-repeat;
-    box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to right bottom, transparent 50%, var(--blue) 50.1%, var(--purple)) no-repeat;
+  box-sizing: border-box;
+
+  @include media('screen', "<midWidth") {
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--black);
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right bottom, var(--purple) 0%, var(--blue)) no-repeat;
+      opacity: 0.85;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+
+    @include media('screen', "<minWidth") {
+      font-size: 14px;
+    }
+  }
+
+  p {
+    mix-blend-mode: overlay;
+    height: fit-content;
+    align-self: flex-start;
 
     @include media('screen', "<midWidth") {
-        &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: var(--black);
-        }
+      color: var(--white);
+    }
+  }
 
-        &:after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to right bottom,var(--purple)  0%, var(--blue)) no-repeat;
-            opacity: 0.85;
-        }
+  .wrapper {
+    margin: 0 50px;
+
+
+    @include media('screen', "<midWidth") {
+      position: relative;
+      z-index: 3;
     }
 
-    p {
-        margin-bottom: 0;
-
-        @include media('screen', "<minWidth") {
-            font-size: 14px;
-        }
+    @include media('screen', "<minWidth") {
+      margin: 0 10px;
     }
 
-    p {
-        mix-blend-mode: overlay;
-        height: fit-content;
-        align-self: flex-start;
+    .skillsList {
+      display: flex;
+      flex-flow: row wrap;
+      min-height: calc(100vh - 150px);
+
+      .skill {
+        opacity: 0;
+        position: relative;
+        flex: 1 15vmax;
+        margin: 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        animation-name: skill-show;
+        animation-duration: .2s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
 
         @include media('screen', "<midWidth") {
-            color: var(--white);
+          flex: 1 150px;
+          margin: 10px;
         }
-    }
 
-    .wrapper {
-        margin: 0 50px;
-
-
-        @include media('screen', "<midWidth") {
-            position: relative;
-            z-index: 3;
+        @include media('screen', "<semiMidWidth") {
+          flex: 1 100px;
+          margin: 10px;
         }
 
         @include media('screen', "<minWidth") {
-            margin: 0 10px;
+          margin: 40px auto;
         }
 
-        .skillsList {
-            display: flex;
-            flex-flow: row wrap;
-            min-height: calc(100vh - 150px);
+        .skillImage {
+          position: relative;
+          flex: 1 100%;
+          height: 6vmax;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          align-self: flex-end;
 
-            .skill {
-                position: relative;
-                flex: 1 15vmax;
-                margin: 0;
-                display: flex;
-                flex-flow: row wrap;
-                justify-content: center;
-                align-items: center;
+          @include media('screen', "<midWidth") {
+            height: 80px;
+          }
 
-                @include media('screen', "<midWidth") {
-                    flex: 1 150px;
-                    margin: 10px;
-                }
+          @include media('screen', "<semiMidWidth") {
+            height: 50px;
+          }
 
-                @include media('screen', "<semiMidWidth") {
-                    flex: 1 100px;
-                    margin: 10px;
-                }
-
-                @include media('screen', "<minWidth") {
-                    margin: 40px auto;
-                }
-
-                .skillImage {
-                    position: relative;
-                    flex: 1 100%;
-                    height: 6vmax;
-                    display: flex;
-                    align-items: flex-end;
-                    justify-content: center;
-                    align-self: flex-end;
-
-                    @include media('screen', "<midWidth") {
-                        height: 80px;
-                    }
-
-                    @include media('screen', "<semiMidWidth") {
-                        height: 50px;
-                    }
-
-                    img {
-                        height: 100%;
-                        max-width: 100%;
-                        object-fit: contain;
-                    }
-                }
-            }
+          img {
+            height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+          }
         }
+      }
     }
+  }
 }
