@@ -1,4 +1,8 @@
 {
+  "menu": [{
+    "name": "Credit Estimator Project",
+    "href": "/credit-estimator"
+  }],
   "skills": [
     {
       "name": "JavaScript",

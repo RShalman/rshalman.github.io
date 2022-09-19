@@ -5,8 +5,12 @@ import { useRef } from 'react';
 
 import S from './index.module.scss';
 
-//  TODO: switch all to SVGs
+// TODO: router
+// TODO: switch all to SVGs
 // TODO: accessibility
+// TODO: favicon
+// TODO: type-errors
+
 export const Skills = () => {
   const skillsRef = useRef(null);
   const isShow = useShowOnIntersection(skillsRef);

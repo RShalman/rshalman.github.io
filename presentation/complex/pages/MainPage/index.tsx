@@ -1,3 +1,4 @@
+import { Menu } from '@presentation/commons/Menu/index';
 import { FC } from 'react';
 
 import { MainPageProps } from 'presentation/complex/pages/MainPage/types';
@@ -12,6 +13,7 @@ import S from './index.module.scss';
 export const MainPage: FC<MainPageProps> = () => {
   return (
     <div className={S.MainPage}>
+      <Menu />
       <Greeting />
       <Skills />
       <WorkplacesBanner />

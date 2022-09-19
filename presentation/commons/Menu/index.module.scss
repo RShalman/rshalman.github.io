@@ -1,0 +1,80 @@
+.menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+
+  .menuButton {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--blue-to-purple-gradient);
+    border-radius: 100%;
+    border: 1px solid var(--white);
+    z-index: 1;
+    cursor: pointer;
+
+    &:after, &:before {
+      content: '';
+      position: absolute;
+      left: 25%;
+      width: 50%;
+      height: 2px;
+      background-color: var(--white);
+      transition: transform .5s ease-in-out;
+    }
+
+    &:after {
+      top: calc(50% + 4px);
+    }
+    &:before {
+      top: calc(50% - 4px);
+    }
+
+    &.open {
+
+      &:before {
+        transform: rotate(-45deg) translate(-2.5px, 3px);
+      }
+      &:after {
+        transform: rotate(45deg) translate(-2.5px, -3px);
+      }
+    }
+  }
+
+  .menuListWrapper {
+    position: absolute;
+    top: -20px;
+    left: calc(-100vw + 60px);
+    width: 100vw;
+    height: 100vh;
+    transform: translateX(-100vw);
+    background: var(--blue-to-purple-gradient);
+    transition: transform .5s ease-in-out;
+
+    &.open {
+      transform: translateX(0);
+    }
+
+    .menuList {
+      margin: 80px 20px;
+      padding-left: 0;
+      list-style: none;
+
+      .menuItem{
+        width: fit-content;
+        color: var(--white);
+        font-size: 20px;
+        margin: 10px 20px;
+
+        &:hover {
+          mix-blend-mode: overlay;
+        }
+
+      }
+    }
+
+  }
+}
