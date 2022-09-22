@@ -52,9 +52,11 @@
     height: 100vh;
     transform: translateX(-100vw);
     background: var(--blue-to-purple-gradient);
-    transition: transform .5s ease-in-out;
+    visibility: hidden;
+    transition: all .5s ease-in-out;
 
     &.open {
+      visibility: visible;
       transform: translateX(0);
     }
 
