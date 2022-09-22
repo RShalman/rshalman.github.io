@@ -17,15 +17,15 @@ export const Menu = () => {
         className={classNames(S.menuButton, openMenu ? S.open : '')}
         onClick={toggleMenu}
       />
-      <div className={classNames(S.menuListWrapper, openMenu ? S.open : '')}>
-        <ul className={S.menuList}>
+      <nav className={classNames(S.menuListWrapper, openMenu ? S.open : '')}>
+        <ol className={S.menuList}>
           {config.menu.map(({ name, href }) => (
             <li key={name} className={S.menuItem}>
               <a href={href}>{name}</a>
             </li>
           ))}
-        </ul>
-      </div>
+        </ol>
+      </nav>
     </div>
   );
 };

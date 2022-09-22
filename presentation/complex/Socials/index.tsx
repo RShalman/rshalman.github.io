@@ -1,3 +1,5 @@
+import { useMemo, useRef, useState } from 'react';
+
 import config from '@config/config.json';
 import { Button } from '@presentation/commons/Button/index';
 import { Header } from '@presentation/commons/Header/index';
@@ -6,7 +8,7 @@ import { TWComponent } from '@presentation/commons/TWComponent';
 import { useShowOnIntersection } from '@presentation/providers/IntersectionProvider/hooks/use-show-on-intersection';
 import { alphaAngleInRectTriangleInDegs } from '@utils/commons';
 import { useWindowSize } from '@utils/hooks/use-window-width';
-import { useMemo, useRef, useState } from 'react';
+
 import S from './index.module.scss';
 
 export const Socials = () => {

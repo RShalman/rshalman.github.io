@@ -5,10 +5,8 @@ import { useRef } from 'react';
 
 import S from './index.module.scss';
 
-// TODO: accessibility
-// TODO: favicon
-// TODO: type-errors
 // TODO: create own favicon
+// TODO: type-errors
 // TODO: readme
 
 export const Skills = () => {

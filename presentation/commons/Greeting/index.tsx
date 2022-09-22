@@ -1,6 +1,7 @@
+import { useRef, useState } from 'react';
+
 import { TWComponent } from '@presentation/commons/TWComponent';
 import { useShowOnIntersection } from '@presentation/providers/IntersectionProvider/hooks/use-show-on-intersection';
-import { useRef, useState } from 'react';
 
 import S from './index.module.scss';
 
