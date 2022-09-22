@@ -5,7 +5,6 @@ import { useRef } from 'react';
 
 import S from './index.module.scss';
 
-// TODO: create own favicon
 // TODO: type-errors
 // TODO: readme
 
