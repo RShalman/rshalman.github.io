@@ -21,11 +21,9 @@
 @keyframes socials {
   0% {
     opacity: 0;
-    transform: translateX(-40vmax);
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
   }
 }
 
@@ -122,6 +120,17 @@
         .icon {
           margin: 0 20px;
         }
+      }
+    }
+
+    .creds {
+      position: absolute;
+      bottom: 10px;
+      right: 50px;
+
+      .credsText {
+        margin: 0;
+        color: var(--black)
       }
     }
   }

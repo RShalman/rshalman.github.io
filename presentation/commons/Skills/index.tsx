@@ -5,11 +5,11 @@ import { useRef } from 'react';
 
 import S from './index.module.scss';
 
-// TODO: router
-// TODO: switch all to SVGs
 // TODO: accessibility
 // TODO: favicon
 // TODO: type-errors
+// TODO: create own favicon
+// TODO: readme
 
 export const Skills = () => {
   const skillsRef = useRef(null);

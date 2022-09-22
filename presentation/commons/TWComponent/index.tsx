@@ -1,7 +1,8 @@
-import { IFunction } from '@types/commons';
-import { classNames } from '@utils/commons';
 import { useState } from 'react';
 import Typewriter from 'typewriter-effect';
+
+import { IFunction } from '@types/commons';
+import { classNames } from '@utils/commons';
 
 import S from './index.module.scss';
 

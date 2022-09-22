@@ -6,8 +6,8 @@
       "dom.iterable",
       "esnext"
     ],
-    "baseUrl": ".",
-    "rootDir": ".",
+    "baseUrl": "./",
+    "rootDir": "./",
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -44,7 +44,6 @@
   },
   "include": [
     "**/*.ts",
-    "**/*.d.ts",
     "**/*.tsx",
     "**/*.json"
   ],

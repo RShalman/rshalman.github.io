@@ -81,6 +81,11 @@ export const Socials = () => {
             )}
           </>
         )}
+        <div className={S.creds}>
+          <p
+            className={S.credsText}
+          >{`Developed & designed by Roman Shalman © ${new Date().getFullYear()}`}</p>
+        </div>
       </div>
     </section>
   );
