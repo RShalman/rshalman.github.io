@@ -19,6 +19,7 @@ export const Skills = () => {
           <>
             <Header
               title={'Experienced in following technologies'}
+              className={S.header}
               withTypeWriter
             />
             <div className={S.skillsList}>

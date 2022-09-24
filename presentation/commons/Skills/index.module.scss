@@ -41,21 +41,24 @@
     }
   }
 
-  p {
-    margin-bottom: 0;
-
-    @include media('screen', "<minWidth") {
-      font-size: 14px;
+  .header {
+    @include media('screen', ">midWidth") {
+      color: var(--black) !important;
     }
   }
 
   p {
+    margin-bottom: 0;
     mix-blend-mode: overlay;
     height: fit-content;
     align-self: flex-start;
 
     @include media('screen', "<midWidth") {
       color: var(--white);
+    }
+
+    @include media('screen', "<minWidth") {
+      font-size: 14px;
     }
   }
 
