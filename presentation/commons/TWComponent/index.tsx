@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Typewriter from 'typewriter-effect';
 
-import { IFunction } from '@types/commons';
+import { IFunction } from '@customTypes/custom';
 import { classNames } from '@utils/commons';
 
 import S from './index.module.scss';

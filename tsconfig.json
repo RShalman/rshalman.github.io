@@ -22,6 +22,7 @@
     "jsx": "preserve",
     "incremental": true,
     "types": [
+      "node",
       "react/next",
       "react-dom/next"
     ],
@@ -37,13 +38,14 @@
       ],
       "@utils/*": [
         "./utils/*"
-      ],"@types/*": [
+      ],"@customTypes/*": [
         "./types/*"
       ]
     }
   },
   "include": [
     "**/*.ts",
+    "**/*.d.ts",
     "**/*.tsx",
     "**/*.json"
   ],

@@ -1,11 +1,11 @@
+import { useRef } from 'react';
+
 import config from '@config/config.json';
 import { Header } from '@presentation/commons/Header';
 import { useShowOnIntersection } from '@presentation/providers/IntersectionProvider/hooks/use-show-on-intersection';
-import { useRef } from 'react';
 
 import S from './index.module.scss';
 
-// TODO: type-errors
 // TODO: readme
 
 export const Skills = () => {

@@ -1,4 +1,3 @@
-import { IFunction } from '@types/commons';
 import {
   createContext,
   FC,
@@ -6,6 +5,8 @@ import {
   RefObject,
   useContext,
 } from 'react';
+
+import { IFunction } from '@customTypes/custom';
 
 export type IntersectionProviderContext = {
   entries: typeof entriesMap;
