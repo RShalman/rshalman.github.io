@@ -6,8 +6,6 @@ import { useShowOnIntersection } from '@presentation/providers/IntersectionProvi
 
 import S from './index.module.scss';
 
-// TODO: readme
-
 export const Skills = () => {
   const skillsRef = useRef(null);
   const isShow = useShowOnIntersection(skillsRef);
