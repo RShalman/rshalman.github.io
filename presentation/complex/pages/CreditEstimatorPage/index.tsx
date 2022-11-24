@@ -1,13 +1,18 @@
 import CreditEstimator from 'credit-estimator';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 const NODE_ID = 'credit-estimator-project';
 
-export const CreditEstimatorPage = () => {
-  useEffect(() => {
-    const [, onUnmount] = CreditEstimator(NODE_ID);
-    return onUnmount;
-  }, []);
+const CreditEstimatorPage = () => {
+  const ref = useRef<HTMLDivElement>(null);
 
-  return <div id={NODE_ID} />;
+  useEffect(() => {
+    if (!ref?.current?.hasChildNodes()) {
+      CreditEstimator(NODE_ID);
+    }
+  }, [ref]);
+
+  return <div ref={ref} id={NODE_ID} />;
 };
+
+export default CreditEstimatorPage;
