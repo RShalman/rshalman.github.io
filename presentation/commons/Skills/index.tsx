@@ -30,7 +30,7 @@ export const Skills = () => {
                   <div className={S.skillImage}>
                     <img src={skill.imageURL} alt={skill.name} />
                   </div>
-                  <p>{skill.name}</p>
+                  <p className={S.skillName}>{skill.name}</p>
                 </div>
               ))}
             </div>

@@ -47,11 +47,12 @@
     }
   }
 
-  p {
+  .skillName {
     margin-bottom: 0;
     mix-blend-mode: overlay;
     height: fit-content;
     align-self: flex-start;
+    color: var(--black);
 
     @include media('screen', "<midWidth") {
       color: var(--white);
