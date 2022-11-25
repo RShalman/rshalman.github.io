@@ -1,6 +1,6 @@
 import { MainPage } from '@presentation/complex/pages/MainPage';
 import { IntersectionProvider } from '@presentation/providers/IntersectionProvider';
-import { lazy } from 'react';
+import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router';
 
 const CreditEstimatorPageComponent = lazy(
@@ -14,7 +14,11 @@ function App() {
         <Route path={'/'} element={<MainPage />} />
         <Route
           path={'/credit-estimator'}
-          element={<CreditEstimatorPageComponent />}
+          element={
+            <Suspense fallback={<div>Loading... </div>}>
+              <CreditEstimatorPageComponent />
+            </Suspense>
+          }
         />
       </Routes>
     </IntersectionProvider>
