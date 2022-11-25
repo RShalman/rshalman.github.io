@@ -1,0 +1,26 @@
+@keyframes blinking-cursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.tw {
+  line-height: 1.6;
+
+  .cursor {
+    animation: blinking-cursor 1s infinite;
+  }
+
+  &.complete {
+    .cursor {
+      opacity: 0;
+      animation: none;
+    }
+  }
+}

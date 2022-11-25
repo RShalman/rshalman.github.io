@@ -1,0 +1,155 @@
+@import "styles/mixins";
+
+@keyframes contact-me {
+  from {
+    transform: translateX(-100vmax);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes contact-me-backward {
+  from {
+    transform: translateX(100vmax);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes socials {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.socials {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to left top, transparent 50%, var(--purple) 50.1%, var(--blue)) no-repeat;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  @include media('screen', "<midWidth") {
+    background: linear-gradient(to right bottom, var(--blue), var(--purple)) no-repeat;
+  }
+
+  .wrapper {
+    margin: 0 50px;
+    min-height: 100vh;
+
+    .header {
+      color: var(--white);
+      mix-blend-mode: unset;
+    }
+
+    .text {
+      max-width: 50%;
+      margin-top: 20%;
+      color: var(--white);
+      font-size: 36px;
+
+      @include media('screen', "<midWidth") {
+        margin-top: 10%;
+        font-size: 22px;
+      }
+
+      @include media('screen', "<semiMidWidth") {
+        max-width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+
+    .buttonWrapper {
+      position: absolute;
+      width: min-content;
+      top: calc(50% - 44px);
+      left: calc(50% - 154px);
+
+      @include media('screen', "<midWidth") {
+        transform: none !important;
+        top: calc(10% + 40px);
+        left: auto;
+        right: 50px;
+      }
+
+      @include media('screen', "<semiMidWidth") {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        margin: 0 auto;
+      }
+
+      .contactMe {
+        transform: translateX(-100vmax);
+        animation: contact-me 1.5s ease-in-out forwards;
+
+        @include media('screen', "<midWidth") {
+          animation: contact-me-backward 1.5s ease-in-out forwards;
+        }
+      }
+    }
+
+    .icons {
+      position: absolute;
+      top: calc(65% - 43px);
+      left: calc(65% - 442px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include media('screen', "<midWidth") {
+        transform: none !important;
+        position: relative;
+        top: auto;
+        left: auto;
+        height: 50vh;
+        flex-flow: row wrap;
+        margin-top: 10%;
+      }
+
+      .iconWrapper {
+        opacity: 0;
+        animation: socials 1.5s ease-in-out forwards;
+
+        @include media('screen', "<midWidth") {
+          transform: none !important;
+        }
+
+        .icon {
+          margin: 0 20px;
+        }
+      }
+    }
+
+    .creds {
+      position: absolute;
+      bottom: 10px;
+      right: 50px;
+
+      @include media('screen', "<midWidth") {
+        position: relative;
+        text-align: center;
+        right: 0;
+        bottom: 0;
+        margin: 40px auto;
+      }
+
+      .credsText {
+        margin: 0;
+        color: var(--black);
+
+        @include media('screen', "<midWidth") {
+          color: var(--white);
+        }
+
+      }
+    }
+  }
+}
