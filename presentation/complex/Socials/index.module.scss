@@ -54,6 +54,11 @@
       color: var(--white);
       font-size: 36px;
 
+      @include media('screen', "<midWidth") {
+        margin-top: 10%;
+        font-size: 22px;
+      }
+
       @include media('screen', "<semiMidWidth") {
         max-width: 100%;
         margin-bottom: 30px;
@@ -68,7 +73,7 @@
 
       @include media('screen', "<midWidth") {
         transform: none !important;
-        top: calc(20% + 40px);
+        top: calc(10% + 40px);
         left: auto;
         right: 50px;
       }
@@ -128,9 +133,22 @@
       bottom: 10px;
       right: 50px;
 
+      @include media('screen', "<midWidth") {
+        position: relative;
+        text-align: center;
+        right: 0;
+        bottom: 0;
+        margin: 40px auto;
+      }
+
       .credsText {
         margin: 0;
-        color: var(--black)
+        color: var(--black);
+
+        @include media('screen', "<midWidth") {
+          color: var(--white);
+        }
+
       }
     }
   }

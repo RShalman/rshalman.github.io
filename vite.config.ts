@@ -15,4 +15,7 @@ export default defineConfig({
       '@customTypes': path.resolve(__dirname, './types'),
     },
   },
+  build: {
+    outDir: './docs',
+  },
 });
