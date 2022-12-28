@@ -18,6 +18,17 @@ export const Socials = () => {
   const isShow = useShowOnIntersection(socialsRef);
 
   const { width, height } = useWindowSize();
+
+  const widerThanTablet = useMemo(() => width > 960, [width]);
+
+  const socialIconDimension = useMemo(
+    () =>
+      widerThanTablet
+        ? `calc(60vmin / ${config.socials.icons.length})`
+        : '86px',
+    [widerThanTablet, config.socials.icons.length]
+  );
+
   const buttonRotationAngle = useMemo(
     () => alphaAngleInRectTriangleInDegs(height, width),
     [height, width]
@@ -75,7 +86,11 @@ export const Socials = () => {
                       href={href}
                       imgPath={imgPath}
                       className={S.icon}
-                      isBgWhite={width > 960}
+                      isBgWhite={widerThanTablet}
+                      dimensions={{
+                        width: socialIconDimension,
+                        height: socialIconDimension,
+                      }}
                     />
                   </div>
                 ))}

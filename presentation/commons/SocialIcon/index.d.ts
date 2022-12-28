@@ -4,4 +4,8 @@ export type ISocialIcon = {
   name?: string;
   isBgWhite?: boolean;
   className?:string;
+  dimensions?: {
+    width: string,
+    height: string
+  }
 }

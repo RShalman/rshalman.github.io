@@ -9,8 +9,10 @@ export const SocialIcon = ({
   imgPath,
   isBgWhite = false,
   className,
+  dimensions,
 }: ISocialIcon) => (
   <div
+    style={dimensions && dimensions}
     className={classNames(S.socialIcon, isBgWhite ? S.onWhite : '', className)}
   >
     {href ? (
